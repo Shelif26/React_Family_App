@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import NewExpense from "./components/NewExpense/NewExpense";
 import Expenses from "./components/Expenses/Expense";
+import Navapp from "./navigation/Navapp";
 
 const DUMMY_EXPENSES = [
   {
@@ -50,5 +51,54 @@ const App = () => {
     </>
   );
 };
+const Nav = () => {
+  let component;
+  switch (window.location.pathname) {
+    case "/":
+      component = <App />;
+      break;
+
+    case "/expenseApp":
+      component = <App />;
+      break;
+
+    case "/App2":
+      component = <Navapp />;
+      break;
+  }
+  return (
+    <>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+        integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer"
+      />
+      <nav className="nav_header">
+        <ul className="nav_item_list">
+          <li className="nav_item">
+            <a href="./home.js">
+              <i class="fa-solid fa-house-user"></i> Home
+            </a>
+          </li>
+          <li className="nav_item">
+            <a href="/expenseApp">
+              <i class="fa-sharp fa-solid fa-calculator"></i> Expense Calculator
+            </a>
+          </li>
+          <li className="nav_item">
+            <a href="/App2">
+              <i class="fa-brands fa-apple"></i> Application
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      {component}
+    </>
+  );
+};
 
 export default App;
+export { Nav };
