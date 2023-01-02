@@ -3,7 +3,8 @@ body {
   font-family:'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(100, 112, 112);
+  background-image: url('https://cdn.wallpapersafari.com/47/94/jwbanZ.png');
+  background-position: right;
 }
 
 code {
