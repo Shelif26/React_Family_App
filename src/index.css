@@ -1,11 +1,22 @@
 body {
-  margin: 0;
+  width: 100%;
+  margin: 0%;
   font-family:'Times New Roman', Times, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
+ 
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace}
+
+@media(
+  max-width:600px
+){
+  body{
+    background-position: top;
+    background-repeat: no-repeat;
+    background-image: url("https://im.indiatimes.in/content/2021/Aug/indian-rupee-history_612782eeee46b.jpg?w=1200&h=900&cc=1")
+  }
+}
